@@ -1173,6 +1173,9 @@ func (m *Manager) becomeFollower() {
 	m.globalOrchestrator.Stop()
 	m.globalOrchestrator = nil
 
+	m.jobsOrchestrator.Stop()
+	m.jobsOrchestrator = nil
+
 	m.taskReaper.Stop()
 	m.taskReaper = nil
 
